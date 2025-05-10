@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuscuz Delícia - Peça pelo WhatsApp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .flavor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .flavor-icon {
+            font-size: 2.5rem;
+            transition: all 0.3s ease;
+        }
+        .flavor-card:hover .flavor-icon {
+            transform: scale(1.1);
+        }
+        .whatsapp-btn {
+            background-color: #25D366;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+        .price-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-yellow-50 font-sans">
+    <header class="bg-yellow-600 text-white py-6 shadow-md">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">Cuscuz Delícia</h1>
+            <p class="text-yellow-100">Peça agora e receba em casa!</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-yellow-800 mb-4">Nossos Sabores</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Escolha entre nossos deliciosos sabores de cuscuz e peça diretamente pelo WhatsApp</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Costela -->
+            <div class="flavor-card bg-white rounded-lg overflow-hidden shadow-lg relative transition-all duration-300">
+                <div class="price-tag text-yellow-700">R$ 20,00</div>
+                <div class="p-6 text-center">
+                    <div class="flavor-icon text-yellow-600 mb-4">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-yellow-800 mb-2">Cuscuz de Costela</h3>
+                    <p class="text-gray-600 mb-4">Delicioso cuscuz nordestino acompanhado de suculentas costelas.</p>
+                    <button onclick="orderWhatsApp('Cuscuz de Costela - R$ 20,00')" 
+                            class="whatsapp-btn w-full py-2 px-4 rounded-lg text-white font-semibold flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Pedir pelo WhatsApp
+                    </button>
+                </div>
+            </div>
+
+            <!-- Linguiça -->
+            <div class="flavor-card bg-white rounded-lg overflow-hidden shadow-lg relative transition-all duration-300">
+                <div class="price-tag text-yellow-700">R$ 20,00</div>
+                <div class="p-6 text-center">
+                    <div class="flavor-icon text-yellow-600 mb-4">
+                        <i class="fas fa-hotdog"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-yellow-800 mb-2">Cuscuz de Linguiça</h3>
+                    <p class="text-gray-600 mb-4">Tradicional cuscuz com linguiça toscana defumada, uma combinação perfeita.</p>
+                    <button onclick="orderWhatsApp('Cuscuz de Linguiça - R$ 20,00')" 
+                            class="whatsapp-btn w-full py-2 px-4 rounded-lg text-white font-semibold flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Pedir pelo WhatsApp
+                    </button>
+                </div>
+            </div>
+
+            <!-- Calabresa -->
+            <div class="flavor-card bg-white rounded-lg overflow-hidden shadow-lg relative transition-all duration-300">
+                <div class="price-tag text-yellow-700">R$ 17,60</div>
+                <div class="p-6 text-center">
+                    <div class="flavor-icon text-yellow-600 mb-4">
+                        <i class="fas fa-bacon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-yellow-800 mb-2">Cuscuz de Calabresa</h3>
+                    <p class="text-gray-600 mb-4">Cuscuz com calabresa fatiada e temperada, um clássico que nunca sai de moda.</p>
+                    <button onclick="orderWhatsApp('Cuscuz de Calabresa - R$ 17,60')" 
+                            class="whatsapp-btn w-full py-2 px-4 rounded-lg text-white font-semibold flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Pedir pelo WhatsApp
+                    </button>
+                </div>
+            </div>
+
+            <!-- Lagarto -->
+            <div class="flavor-card bg-white rounded-lg overflow-hidden shadow-lg relative transition-all duration-300">
+                <div class="price-tag text-yellow-700">R$ 17,60</div>
+                <div class="p-6 text-center">
+                    <div class="flavor-icon text-yellow-600 mb-4">
+                        <i class="fas fa-hamburger"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-yellow-800 mb-2">Cuscuz de Lagarto</h3>
+                    <p class="text-gray-600 mb-4">Cuscuz com carne de lagarto suculenta e bem temperada, uma experiência única.</p>
+                    <button onclick="orderWhatsApp('Cuscuz de Lagarto - R$ 17,60')" 
+                            class="whatsapp-btn w-full py-2 px-4 rounded-lg text-white font-semibold flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Pedir pelo WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 bg-yellow-100 rounded-lg p-6 text-center max-w-4xl mx-auto">
+            <h3 class="text-xl font-bold text-yellow-800 mb-4">Como fazer seu pedido?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <div class="text-yellow-600 text-2xl mb-2">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">1. Escolha seu sabor</h4>
+                    <p class="text-gray-600 text-sm">Selecione entre nossos 4 deliciosos sabores</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <div class="text-yellow-600 text-2xl mb-2">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">2. Clique no botão</h4>
+                    <p class="text-gray-600 text-sm">Será direcionado automaticamente para nosso WhatsApp</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <div class="text-yellow-600 text-2xl mb-2">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">3. Receba em casa</h4>
+                    <p class="text-gray-600 text-sm">Entregamos no conforto do seu lar</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-yellow-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-xl font-bold mb-2">Cuscuz Delícia</h3>
+            <p class="text-yellow-200 mb-4">O melhor cuscuz da região!</p>
+            <div class="flex justify-center gap-4">
+                <a href="https://wa.me/5511940748009" class="text-white hover:text-yellow-300 text-2xl">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <p class="mt-4 text-yellow-200 text-sm">© 2023 Cuscuz Delícia - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        function orderWhatsApp(flavor) {
+            const message = `Olá! Gostaria de pedir: ${flavor}.`;
+            const whatsappUrl = `https://wa.me/5511940748009?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=DhanItachi/cuscuz" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
